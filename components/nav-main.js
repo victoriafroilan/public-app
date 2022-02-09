@@ -49,11 +49,11 @@ export default function NavMain({
   return (
     <div>
       <div className="fixed top-0 flex flex-col w-full">
-        <nav className="bg-white dark:bg-sky-900 mx-auto flex flex-row flex-wrap h-16 w-full">
+        <nav className="bg-white dark:bg-sky-900 mx-auto flex flex-row flex-wrap w-full">
           <div className="grow shrink-0 flex-wrap dark:bg-blue dark:text-slate-50 dark:hover:text-sky-100 hover:text-sky-900 items-center flex flex-column px-3">
             <Link href={brandHref}>
               <a className="flex">
-                <div className="dark:bg-white rounded-lg">
+                <div className="dark:bg-white rounded-lg flex items-center">
                   <Image
                     src={brandImageSrc}
                     width="40"
@@ -74,7 +74,7 @@ export default function NavMain({
                 !menuHidden
                   ? 'dark:bg-slate-700 bg-slate-200'
                   : 'dark:bg-sky-900'
-              } dark:sm:hover:bg-slate-900 sm:hover:bg-slate-300 dark:text-cyan-50 flex flex-row w-48 sm:w-60 items-center px-3`}
+              } dark:sm:hover:bg-slate-900 sm:hover:bg-slate-300 dark:text-cyan-50 flex flex-row w-48 sm:w-60 items-center px-3 h-16`}
               onClick={() => setMenuHidden(!menuHidden ? 'hidden' : '')}
             >
               <span className="font-light align-center mx-auto text-ellipsis break-all overflow-hidden whitespace-nowrap">
