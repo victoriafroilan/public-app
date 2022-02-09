@@ -12,7 +12,7 @@ function MenuItem({ href, title }) {
       <Link href={href} passHref className="basis-full">
         <a
           title={title}
-          className="basis-full hover:text-sky-300 text-white font-light h-14 sm:h-10 flex items-center"
+          className="basis-full text-white font-light h-14 sm:h-10 flex items-center"
         >
           <small className="px-5">{title}</small>
         </a>
@@ -50,7 +50,7 @@ export default function NavMain({
     <div>
       <div className="fixed top-0 flex flex-col w-full">
         <nav className="bg-white dark:bg-sky-900 mx-auto flex flex-row flex-wrap w-full">
-          <div className="grow shrink-0 flex-wrap dark:bg-blue dark:text-slate-50 dark:hover:text-sky-100 hover:text-sky-900 items-center flex flex-column px-3">
+          <div className="grow shrink-0 flex-wrap dark:bg-blue dark:text-slate-50 items-center flex flex-column px-3">
             <Link href={brandHref}>
               <a className="flex">
                 <div className="dark:bg-white rounded-lg flex items-center">
@@ -74,7 +74,7 @@ export default function NavMain({
                 !menuHidden
                   ? 'dark:bg-slate-700 bg-slate-200'
                   : 'dark:bg-sky-900'
-              } dark:sm:hover:bg-slate-900 sm:hover:bg-slate-300 dark:text-cyan-50 flex flex-row w-36 sm:w-60 items-center px-3 h-16`}
+              } dark:sm:active:bg-sky-900 dark:text-cyan-50 flex flex-row w-36 sm:w-60 items-center px-3 h-16`}
               onClick={() => setMenuHidden(!menuHidden ? 'hidden' : '')}
             >
               <span className="font-light align-center mx-auto text-ellipsis break-all overflow-hidden whitespace-nowrap">
