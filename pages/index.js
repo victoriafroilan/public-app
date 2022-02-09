@@ -6,15 +6,15 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <Head>
-        <title>Create Next App</title>
+        <title>Page - {process.env.appName}</title>
       </Head>
 
-      <NavMain />
+      <NavMain brandTitle={process.env.appShortName} />
 
       <Footer />
 
       <main
-        className="h-full flex flex-col flex-1 bg-center bg-cover bg-origin-border"
+        className="flex flex-col flex-1 bg-center bg-cover bg-origin-border"
         style={{
           backgroundImage:
             'url(https://vms-s3-ph-vms-static.imgix.net/images/bg-mountain-fields-trees.jpg)',
