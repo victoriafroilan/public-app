@@ -74,7 +74,7 @@ export default function NavMain({
                 !menuHidden
                   ? 'dark:bg-slate-700 bg-slate-200'
                   : 'dark:bg-sky-900'
-              } dark:sm:hover:bg-slate-900 sm:hover:bg-slate-300 dark:text-cyan-50 flex flex-row w-48 sm:w-60 items-center px-3 h-16`}
+              } dark:sm:hover:bg-slate-900 sm:hover:bg-slate-300 dark:text-cyan-50 flex flex-row w-36 sm:w-60 items-center px-3 h-16`}
               onClick={() => setMenuHidden(!menuHidden ? 'hidden' : '')}
             >
               <span className="font-light align-center mx-auto text-ellipsis break-all overflow-hidden whitespace-nowrap">
