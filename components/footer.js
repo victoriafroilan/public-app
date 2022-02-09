@@ -31,6 +31,6 @@ Footer.propTypes = {
 
 Footer.defaultProps = {
   name: 'Company',
-  yearFrom: new Date().getFullYear().toString(),
-  yearTo: new Date().getFullYear().toString(),
+  yearFrom: new Date().getFullYear(),
+  yearTo: new Date().getFullYear(),
 };
