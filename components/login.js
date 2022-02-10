@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 function FormControl({ type, name, text, required, placeholder }) {
   return (
-    <div className="flex flex-col">
-      <label htmlFor={name}>
+    <div className="flex flex-col gap-y-1">
+      <label htmlFor={name} className="font-medium">
         <small>{text}</small>
       </label>
       <input
@@ -12,7 +13,7 @@ function FormControl({ type, name, text, required, placeholder }) {
         name={name}
         type={type}
         placeholder={placeholder}
-        className="border focus:outline-none focus:border-sky-700 focus:rounded focus:ring-1 focus:ring-sky-700 font-light py-3 px-2 invalid:required:text-pink-600 rounded focus:ring-blue-500"
+        className="border focus:outline-none focus:border-sky-700 focus:rounded focus:ring-1 focus:ring-sky-700 font-light py-2 px-4 invalid:required:text-pink-600 rounded focus:ring-blue-500"
       />
     </div>
   );
@@ -31,7 +32,7 @@ FormControl.defaultProps = {
   placeholder: '',
 };
 
-export default function Login() {
+export default function Login({ title, description, hrefForgotPassword }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const target = event.target;
@@ -43,14 +44,14 @@ export default function Login() {
 
   return (
     <div className="flex justify-center my-3">
-      <div className="flex flex-col basis-11/12 sm:basis-3/12 py-5 px-6 border border-gray-300 rounded gap-y-6 bg-white">
+      <div className="flex flex-col basis-80 mx-2 iphone-8:mx-0 py-5 px-6 border border-gray-300 rounded-lg gap-y-6 bg-white">
         <div className="flex flex-col">
-          <div className="text-center text-lg">App Name</div>
+          <div className="text-center text-lg">{title}</div>
           <div className="text-center text-slate-500">
-            <small>Description</small>
+            <small>{description}</small>
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="m-0 flex flex-col gap-y-7">
+        <form onSubmit={handleSubmit} className="m-0 flex flex-col gap-y-5">
           <div className="flex flex-col gap-y-3">
             <FormControl
               type="email"
@@ -66,11 +67,16 @@ export default function Login() {
               required
               placeholder="password"
             />
+            <Link href={hrefForgotPassword}>
+              <a className="text-blue-700">
+                <small>Forgot Password?</small>
+              </a>
+            </Link>
           </div>
           <div className="flex flex-row-reverse">
             <button
               type="submit"
-              className="py-5 px-10 bg-sky-700 rounded text-white"
+              className="py-4 px-10 bg-sky-700 rounded text-white"
             >
               <small>Login</small>
             </button>
@@ -80,3 +86,15 @@ export default function Login() {
     </div>
   );
 }
+
+Login.propTypes = {
+  hrefForgotPassword: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+};
+
+Login.defaultProps = {
+  hrefForgotPassword: '/forgot-password',
+  title: 'App Name',
+  description: 'Description',
+};
