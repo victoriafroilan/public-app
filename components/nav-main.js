@@ -54,7 +54,7 @@ export default function NavMain({
             <Link href={brandHref}>
               <a className="flex h-16 px-3">
                 <div className="flex items-center">
-                  <div className="dark:bg-white rounded-lg">
+                  <div className="dark:bg-white rounded-lg flex">
                     <Image
                       src={brandImageSrc}
                       width="40"
