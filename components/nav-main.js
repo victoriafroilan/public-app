@@ -50,17 +50,19 @@ export default function NavMain({
     <div>
       <div className="fixed top-0 flex flex-col w-full">
         <nav className="bg-white dark:bg-sky-900 mx-auto flex flex-row flex-wrap w-full">
-          <div className="grow shrink-0 flex-wrap dark:bg-blue dark:text-slate-50 items-center flex flex-column px-3">
+          <div className="grow shrink-0 flex-wrap dark:bg-blue dark:text-slate-50 items-center flex flex-column">
             <Link href={brandHref}>
-              <a className="flex">
-                <div className="dark:bg-white rounded-lg flex items-center">
-                  <Image
-                    src={brandImageSrc}
-                    width="40"
-                    height="40"
-                    alt={brandTitle}
-                    className=""
-                  />
+              <a className="flex h-16 px-3">
+                <div className="flex items-center">
+                  <div className="dark:bg-white rounded-lg">
+                    <Image
+                      src={brandImageSrc}
+                      width="40"
+                      height="40"
+                      alt={brandTitle}
+                      className=""
+                    />
+                  </div>
                 </div>
                 <div className="px-3 items-center flex flex-row font-bold text-lg">
                   <span>{brandTitle}</span>

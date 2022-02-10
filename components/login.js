@@ -4,7 +4,7 @@ import Link from 'next/link';
 function FormControl({ type, name, text, required, placeholder }) {
   return (
     <div className="flex flex-col gap-y-1">
-      <label htmlFor={name} className="font-medium">
+      <label htmlFor={name} className="font-medium text-slate-500">
         <small>{text}</small>
       </label>
       <input
@@ -13,7 +13,7 @@ function FormControl({ type, name, text, required, placeholder }) {
         name={name}
         type={type}
         placeholder={placeholder}
-        className="border focus:outline-none focus:border-sky-700 focus:rounded focus:ring-1 focus:ring-sky-700 font-light py-2 px-4 invalid:required:text-pink-600 rounded focus:ring-blue-500"
+        className="border focus:outline-none focus:border-sky-900 focus:rounded focus:ring-1 focus:ring-sky-700 py-2 px-4 text-slate-900 rounded focus:ring-sku-500"
       />
     </div>
   );
@@ -47,7 +47,7 @@ export default function Login({ title, description, hrefForgotPassword }) {
       <div className="flex flex-col basis-80 mx-2 iphone-8:mx-0 py-5 px-6 border border-gray-300 rounded-lg gap-y-6 bg-white">
         <div className="flex flex-col">
           <div className="text-center text-lg">{title}</div>
-          <div className="text-center text-slate-500">
+          <div className="text-center text-slate-700">
             <small>{description}</small>
           </div>
         </div>
