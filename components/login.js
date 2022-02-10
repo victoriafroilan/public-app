@@ -12,7 +12,7 @@ function FormControl({ type, name, text, required, placeholder }) {
         name={name}
         type={type}
         placeholder={placeholder}
-        className="border focus:outline-none focus:border-sky-700 focus:rounded focus:ring-1 focus:ring-sky-700 font-light py-3 px-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 rounded focus:invalid:ring-pink-500"
+        className="border focus:outline-none focus:border-sky-700 focus:rounded focus:ring-1 focus:ring-sky-700 font-light py-3 px-2 invalid:required:text-pink-600 rounded focus:ring-blue-500"
       />
     </div>
   );
@@ -43,15 +43,15 @@ export default function Login() {
 
   return (
     <div className="flex justify-center my-3">
-      <div className="flex flex-col basis-10/12 sm:basis-3/12 p-3 border border-gray-300 rounded gap-y-6 bg-white">
+      <div className="flex flex-col basis-11/12 sm:basis-3/12 py-5 px-6 border border-gray-300 rounded gap-y-6 bg-white">
         <div className="flex flex-col">
           <div className="text-center text-lg">App Name</div>
           <div className="text-center text-slate-500">
             <small>Description</small>
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="m-0 flex flex-col gap-y-5">
-          <div className="flex flex-col gap-y-2">
+        <form onSubmit={handleSubmit} className="m-0 flex flex-col gap-y-7">
+          <div className="flex flex-col gap-y-3">
             <FormControl
               type="email"
               name="email"
@@ -70,7 +70,7 @@ export default function Login() {
           <div className="flex flex-row-reverse">
             <button
               type="submit"
-              className="py-2 px-7 bg-sky-700 rounded text-white"
+              className="py-5 px-10 bg-sky-700 rounded text-white"
             >
               <small>Login</small>
             </button>
