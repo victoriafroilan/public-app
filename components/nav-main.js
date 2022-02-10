@@ -74,7 +74,7 @@ export default function NavMain({
                 !menuHidden
                   ? 'dark:bg-slate-700 bg-slate-200'
                   : 'dark:bg-sky-900'
-              } dark:sm:active:bg-sky-900 dark:text-cyan-50 flex flex-row w-32 sm:w-56 items-center px-3 h-16`}
+              } dark:sm:active:bg-sky-900 dark:text-cyan-50 flex flex-row w-28 iphone-se:w-36 iphone-8:w-48 sm:w-56 items-center px-3 h-16`}
               onClick={() => setMenuHidden(!menuHidden ? 'hidden' : '')}
             >
               <span className="font-light align-center mx-auto text-ellipsis break-all overflow-hidden whitespace-nowrap">
