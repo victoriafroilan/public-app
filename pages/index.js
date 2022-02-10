@@ -17,7 +17,7 @@ export default function Home() {
         className="flex flex-col flex-1 bg-center bg-cover bg-origin-border"
         style={{
           backgroundImage:
-            'url(https://vms-s3-ph-vms-static.imgix.net/images/bg-mountain-fields-trees.jpg)',
+            'url(https://vms-s3-ph-vms-static.imgix.net/images/bg-mountain-fields-trees.jpg?auto=format&h=720)',
         }}
       >
         <h1 className="">
