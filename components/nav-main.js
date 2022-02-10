@@ -74,7 +74,7 @@ export default function NavMain({
                 !menuHidden
                   ? 'dark:bg-slate-700 bg-slate-200'
                   : 'dark:bg-sky-900'
-              } dark:sm:active:bg-sky-900 dark:text-cyan-50 flex flex-row w-36 sm:w-60 items-center px-3 h-16`}
+              } dark:sm:active:bg-sky-900 dark:text-cyan-50 flex flex-row w-36 sm:w-56 items-center px-3 h-16`}
               onClick={() => setMenuHidden(!menuHidden ? 'hidden' : '')}
             >
               <span className="font-light align-center mx-auto text-ellipsis break-all overflow-hidden whitespace-nowrap">
@@ -96,7 +96,7 @@ export default function NavMain({
           </div>
         </nav>
         <div className={`${menuHidden} flex flex-row-reverse`}>
-          <div className="flex flex-col sm:w-60 w-full absolute">
+          <div className="flex flex-col sm:w-56 w-full absolute">
             {menuItems({ data: menu })}
             <MenuItem href="/logout" title="Logout" />
           </div>
