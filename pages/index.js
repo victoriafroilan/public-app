@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import NavMain from '../components/nav-main';
 import Footer from '../components/footer';
+import Login from '../components/login';
 
 export default function Home() {
   return (
@@ -27,6 +28,8 @@ export default function Home() {
         <p className="">
           Get started by editing <code className="">pages/index.js</code>
         </p>
+
+        <Login />
 
         <div className="">
           <a
